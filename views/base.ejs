@@ -1,0 +1,47 @@
+<%-include('header')-%>
+
+
+    <div id="text-center center-div" id="login">
+        <div class="container w-25 border py-5 mt-5">
+            <div class="title pb-5 text-center">
+                <h2 class=" text-center pl-3" style="color: white;">LOGIN SYSTEM</h2>
+                <span class="pl-5" style="color: aliceblue;">Log in for the existing user</span>
+                <% if(locals.logout){%>
+                    <div class="alter alert-success text-center" style="color: rgb(5, 7, 6); background-color: chartreuse;" >
+                        <%=logout%>
+                    </div>
+                <%}%>
+            </div>
+            <!-- <form class="p-5" action="/login" method="post">
+                <h1 class="text-center pl-3" style="color: white;"> {{title}} </h1><br><br>
+                <span class="pl-5" style="font-weight: bold; font-family: 'Times New Roman', Times, serif; font-style: italic;color: greenyellow;"> {{logout}} </span> 
+                <div class="form-group">
+                  <label for="exampleInputEmail1" style="color: #fff;">Email address</label>
+                  <input type="email" class="form-control" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text" style="color: rgb(164, 164, 164);">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" style="color: #fff;">Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="Password">
+                </div><br>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>  -->
+            <form action="/route/login" method="POST" class="pt-3">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                    <small class="form-text text-muted text-left">Register Email Address</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="password">
+                </div>
+                <button type="submit" class="btn btn-success rounded-pill mt-3">LOGIN</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+
+<%-include('footer')-%>
